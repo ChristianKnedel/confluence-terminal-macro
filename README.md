@@ -7,4 +7,5 @@ Define the macro
 
 results 
 
+![alt text](https://github.com/ChristianKnedel/confluence-terminal-macro/blob/master/edit.png "Define the macro")
 ![alt text](https://github.com/ChristianKnedel/confluence-terminal-macro/blob/master/demo.png "Define the macro")
