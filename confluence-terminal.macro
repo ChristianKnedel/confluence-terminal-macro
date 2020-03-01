@@ -1,4 +1,5 @@
-## Macro title: Terminal Markup
+## Macro title: Calibre ebooks
+## A simple macro for viewing available ebooks from calibre web.
 ##
 ## css by: Johannes Jakob https://codepen.io/JohJakob/pen/YPxgwo
 ## Developed by: Christian Knedel https://www.365layouts.com
@@ -7,32 +8,25 @@
 ## @param Title:title=Titlebar Title|type=string|required=truel|default=Bash
 
 <style>
-.window a {
-  text-decoration: none;
-}
-
-.window span {
-  line-height: 9px;
-  vertical-align: 50%;
-}
-.window p {
-    padding:0;margin:0;
-    font-size: 16px;
-}
-
 .window {
-  
   font-family: HelveticaNeue, 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
   background: #000;
   color: #48cf00;
   margin: 10px;
   border: 1px solid #acacac;
   border-radius: 6px;
--webkit-box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
--moz-box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
-box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
+  box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
 }
-
+.window span {
+  line-height: 9px;
+  vertical-align: 50%;
+}
+.window p {
+  padding:0;margin:0;
+  font-size: 16px;
+}
 .titlebar {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #ebebeb, color-stop(1.0, #d5d5d5)));
   background: -webkit-linear-gradient(top, #ebebeb, #d5d5d5);
@@ -57,66 +51,32 @@ box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
   -o-user-select: none;
   cursor: default;
 }
-
 .buttons {
   padding-left: 8px;
   padding-top: 3px;
   float: left;
   line-height: 0px;
 }
-
+.buttons div{
+  font-size: 9pt;
+  width: 11px;
+  height: 11px; 
+  margin-left: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
 .close {
   background: #ff5c5c;
-  font-size: 9pt;
-  width: 11px;
-  height: 11px;
   border: 1px solid #e33e41;
-  border-radius: 50%;
-  display: inline-block;
 }
-
-.closebutton {
-  color: #820005;
-  visibility: hidden;
-  cursor: default;
-}
-
 .minimize {
   background: #ffbd4c;
-  font-size: 9pt;
-  line-height: 11px;
-  margin-left: 4px;
-  width: 11px;
-  height: 11px;
   border: 1px solid #e09e3e;
-  border-radius: 50%;
-  display: inline-block;
 }
-
-.minimizebutton {
-  color: #9a5518;
-  visibility: hidden;
-  cursor: default;
-}
-
 .zoom {
   background: #00ca56;
-  font-size: 9pt;
-  line-height: 11px;
-  margin-left: 6px;
-  width: 11px;
-  height: 11px;
   border: 1px solid #14ae46;
-  border-radius: 50%;
-  display: inline-block;
 }
-
-.zoombutton {
-  color: #006519;
-  visibility: hidden;
-  cursor: default;
-}
-
 .content {
   padding: 10px;
 }
@@ -126,15 +86,9 @@ box-shadow: 0px 0px 8px 0px rgba(112,112,112,1);
 <div class="window">
     <div class="titlebar">
         <div class="buttons">
-             <div class="close">
-                <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-            </div>
-            <div class="minimize">
-                <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-            </div>
-            <div class="zoom">
-                <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-            </div>
+            <div class="close"></div>
+            <div class="minimize"></div>
+            <div class="zoom"></div>
         </div>
         $paramTitle
     </div>
